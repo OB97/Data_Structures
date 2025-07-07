@@ -1,5 +1,7 @@
 package utility;
 
+// Generic Node class for CS-2920
+
 public class Node<T> {
     private T data; // Generic type data
     private Node<T> next; // Reference to the next node (for linked structures)
