@@ -30,16 +30,23 @@ public class LinkedList<T> {
         count ++;
     }
 
-    // Delete a node by value
-    // Need to finish !!
-    public Node<T> remove(int node) {
+    // TODO: Delete a node by value
+    public Node<T> remove(int index) {
         return head;
     }
 
-    // Get the element at the specified index
-    // Need to finish !!
+    // Get the data from the node at the specified index
     public T get(int index){
-        return head.getData();
+        if(head != null){
+            int i = 0;
+            Node<T> current = head;
+            while(i < index){
+                current = current.next;
+                i++;
+            }
+            return current.getData();
+        }
+        return null;
     }
 
     // Check if LL is empty
@@ -54,14 +61,22 @@ public class LinkedList<T> {
 
     // Clear all nodes from LL
     public void clear(){
-        this.head = new Node<>(null);
+        this.head = null;
         count = 0;
     }
 
     // Check if LL contains a data item
-    // Need to finish !!
     public boolean contains(T data) {
-        return true;
+        Node<T> current = head;
+        while(current != null){
+            if(current.getData() == data) {
+                return true;
+            }
+            else{
+            current = current.next;
+            }
+        }
+        return false;
     }
 
     @Override
