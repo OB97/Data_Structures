@@ -5,7 +5,7 @@ import utility.Node;
 // Linked List ADT
 
 public class LinkedList<T> {
-    private Node<T> head;
+    private Node<T> head = null;
     private int count = 0;
 
     // Add a new node at the end
@@ -37,7 +37,10 @@ public class LinkedList<T> {
 
     // Get the data from the node at the specified index
     public T get(int index){
-        if(head != null){
+        if(head == null) {
+            throw new IndexOutOfBoundsException();
+        }
+        else{
             int i = 0;
             Node<T> current = head;
             while(i < index){
@@ -46,7 +49,6 @@ public class LinkedList<T> {
             }
             return current.getData();
         }
-        return null;
     }
 
     // Check if LL is empty
