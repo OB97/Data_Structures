@@ -35,7 +35,7 @@ public class LinkedList<T> {
         return head;
     }
 
-    // Get the data from the node at the specified index
+    // TODO: Get the data from the node at the specified index
     public T get(int index){
         if(head == null) {
             throw new IndexOutOfBoundsException();
