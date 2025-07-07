@@ -1,4 +1,4 @@
-// Launch point for Algobrary
+// CS-2920
 // Call Unit Tests from here
 
 import structures.LinkedList;

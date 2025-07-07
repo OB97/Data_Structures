@@ -4,7 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-// Unit test for Linked List ADT for CS-2920
+// CS-2920
+// Unit test for Linked List ADT
 
 public class LLTest {
 

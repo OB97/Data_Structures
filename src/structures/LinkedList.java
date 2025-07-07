@@ -1,7 +1,8 @@
 package structures;
 import utility.Node;
 
-// Linked List ADT for CS-2920
+// CS-2920
+// Linked List ADT
 
 public class LinkedList<T> {
     private Node<T> head;
