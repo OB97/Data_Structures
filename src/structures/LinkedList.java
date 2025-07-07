@@ -6,6 +6,7 @@ import utility.Node;
 
 public class LinkedList<T> {
     private Node<T> head;
+    private int count = 0;
 
     // Add a new node at the end
     public void add(LinkedList<T> list, T data) {
@@ -26,11 +27,41 @@ public class LinkedList<T> {
             // Insert the new_node at last node
             last.next = new_node;
         }
+        count ++;
     }
 
     // Delete a node by value
-    public void delete(int data) {
+    // Need to finish !!
+    public Node<T> remove(int node) {
+        return head;
+    }
 
+    // Get the element at the specified index
+    // Need to finish !!
+    public T get(int index){
+        return head.getData();
+    }
+
+    // Check if LL is empty
+    public Boolean isEmpty(){
+        return count == 0;
+    }
+
+    // Return the number of elements in LL
+    public int size(){
+        return this.count;
+    }
+
+    // Clear all nodes from LL
+    public void clear(){
+        this.head = new Node<>(null);
+        count = 0;
+    }
+
+    // Check if LL contains a data item
+    // Need to finish !!
+    public boolean contains(T data) {
+        return true;
     }
 
     @Override
@@ -53,5 +84,6 @@ public class LinkedList<T> {
 
         return result.toString();
     }
+
 }
 

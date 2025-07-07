@@ -2,6 +2,8 @@ package testing;
 import structures.LinkedList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import utility.Node;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 // CS-2920
@@ -24,18 +26,18 @@ public class LLTest {
 
     @Test
     public void testAddAndSize() {
-        list.add("apple");
-        list.add("banana");
-        list.add("cherry");
+        list.add(list,"apple");
+        list.add(list, "banana");
+        list.add(list, "cherry");
         assertFalse(list.isEmpty(), "List should not be empty after adding elements");
         assertEquals(3, list.size(), "Size should reflect number of added elements");
     }
 
     @Test
     public void testGet() {
-        list.add("one");
-        list.add("two");
-        list.add("three");
+        list.add(list, "one");
+        list.add(list, "two");
+        list.add(list, "three");
         assertEquals("one", list.get(0));
         assertEquals("two", list.get(1));
         assertEquals("three", list.get(2));
@@ -43,11 +45,11 @@ public class LLTest {
 
     @Test
     public void testRemove() {
-        list.add("x");
-        list.add("y");
-        list.add("z");
-        String removed = list.remove(1);
-        assertEquals("y", removed);
+        list.add(list, "x");
+        list.add(list, "y");
+        list.add(list,"z");
+        Node<String> removed = list.remove(1);
+        assertEquals("y", removed.getData());
         assertEquals(2, list.size());
         assertEquals("x", list.get(0));
         assertEquals("z", list.get(1));
@@ -55,8 +57,8 @@ public class LLTest {
 
     @Test
     public void testClear() {
-        list.add("a");
-        list.add("b");
+        list.add(list, "a");
+        list.add(list, "b");
         list.clear();
         assertTrue(list.isEmpty());
         assertEquals(0, list.size());
@@ -64,27 +66,26 @@ public class LLTest {
 
     @Test
     public void testContains() {
-        list.add("cat");
-        list.add("dog");
+        list.add(list, "cat");
+        list.add(list, "dog");
         assertTrue(list.contains("dog"));
         assertFalse(list.contains("lion"));
     }
 
     @Test
     public void testToStringFormat() {
-        list.add("1");
-        list.add("2");
-        list.add("3");
-        String expected = "[1, 2, 3]"; // Adjust this if your format differs
+        list.add(list, "1");
+        list.add(list, "2");
+        list.add(list, "3");
+        String expected = "[Node1 Data=1, Node2 Data=2, Node3 Data=3]";
         assertEquals(expected, list.toString());
     }
 
     @Test
     public void testIndexOutOfBounds() {
         assertThrows(IndexOutOfBoundsException.class, () -> list.get(0));
-        list.add("first");
+        list.add(list, "first");
         assertThrows(IndexOutOfBoundsException.class, () -> list.get(1));
         assertThrows(IndexOutOfBoundsException.class, () -> list.remove(2));
     }
-}
 }
