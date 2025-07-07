@@ -1,14 +1,16 @@
 // Launch point for Algobrary
-// Decide what algorithms to run and call them from here
+// Call Unit Tests from here
 
+import structures.LinkedList;
 import utility.Node;
 
 public class Main {
     public static void main(String[] args) {
-        Node<String> node1 = new Node<>("x");
-        Node<String> node2 = new Node<>("y");
-        Node<String> node3 = new Node<>("z");
+        LinkedList<String> list = new LinkedList<>();
+        list.add(list, "ONE");
+        list.add(list, "TWO");
+        list.add(list, "THREE");
 
-        System.out.println(node1.toString() + " " + node2.toString() + " " + node3.toString());
+        System.out.println(list.toString());
     }
 }

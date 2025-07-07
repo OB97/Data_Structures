@@ -4,7 +4,7 @@ package utility;
 
 public class Node<T> {
     private T data; // Generic type data
-    private Node<T> next; // Reference to the next node (for linked structures)
+    public Node<T> next; // Reference to the next node (for linked structures)
 
     // Constructor
     public Node(T data) {
