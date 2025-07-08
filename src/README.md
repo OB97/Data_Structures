@@ -10,9 +10,11 @@ Algorithm Library!
 
 ______________________________________________________________
 
-- Node
+- ✅ Node
   - data - stored in node
-  - next - following node / null by default 
+  - next - following node / null by default
+
+  - ✅ getData()
 
 ______________________________________________________________
 
