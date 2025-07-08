@@ -8,9 +8,21 @@ Algorithm Library!
 
 - Important aspect of this for me personally is creating good utility functions that I can re-use and update in the future, such as a csv/json/txt file reader, hopefully will save me time from re-writing the same parsers in the future.
 _______________________________
-- Abstract data types ADTs
-- Linked Lists, Stacks and
-Queues
+
+- ✅ Linked Lists
+  - ✅ add()
+  - ✅ remove()
+  - ✅ get()
+  - ✅ clear()
+  - ✅ contains()
+  - ✅ toString()
+  
+  - Add insertion at end of list
+  - ADT's for doubly and circular LL
+  - ✅ add size() and isEmpty() methods
+  
+- Stacks
+- Queues
 - Analysis of Algorithms
 - Priority Queues
 - Heaps

@@ -63,6 +63,25 @@ public class LinkedList<T> {
         }
     }
 
+    // Clear all nodes from LL
+    public void clear(){
+        this.head = null;
+    }
+
+    // Check if LL contains a data item
+    public boolean contains(T data) {
+        Node<T> current = head;
+        while(current != null){
+            if(current.getData() == data) {
+                return true;
+            }
+            else{
+                current = current.next;
+            }
+        }
+        return false;
+    }
+
     // Check if LL is empty
     public Boolean isEmpty(){
         return this.head == null;
@@ -77,25 +96,6 @@ public class LinkedList<T> {
             current = current.next;
         }
         return total;
-    }
-
-    // Clear all nodes from LL
-    public void clear(){
-        this.head = null;
-    }
-
-    // Check if LL contains a data item
-    public boolean contains(T data) {
-        Node<T> current = head;
-        while(current != null){
-            if(current.getData() == data) {
-                return true;
-            }
-            else{
-            current = current.next;
-            }
-        }
-        return false;
     }
 
     @Override
