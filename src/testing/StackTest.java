@@ -16,4 +16,9 @@ public class StackTest {
     public void setUp() {
         stack = new Stack<>();
     }
+
+    // pop
+    // push
+    // peek
+    // isEmpty
 }
