@@ -30,14 +30,29 @@ public class LinkedList<T> {
         count ++;
     }
 
-    // TODO: Delete a node by value
+    // Remove and return a node by index
     public Node<T> remove(int index) {
-        return head;
+        if (index >= count || index < 0){
+            throw new IndexOutOfBoundsException();
+        }
+        else{
+        int i = 0;
+        Node<T> current = head;
+        Node<T> previous = null;
+        while(i != index){
+            previous = current;
+            current = current.next;
+            i++;
+        }
+        previous.next = current.next;
+        count --;
+        return current;
+        }
     }
 
-    // TODO: Get the data from the node at the specified index
+    // Get the data from the node at the specified index
     public T get(int index){
-        if(head == null) {
+        if (index >= count || index < 0){
             throw new IndexOutOfBoundsException();
         }
         else{

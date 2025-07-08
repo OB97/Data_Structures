@@ -7,3 +7,23 @@ Algorithm Library!
 - Eventually I think I could implement data visualization tools, like step-by-step searching and sorting, or animation-style visuals.
 
 - Important aspect of this for me personally is creating good utility functions that I can re-use and update in the future, such as a csv/json/txt file reader, hopefully will save me time from re-writing the same parsers in the future.
+_______________________________
+- Abstract data types ADTs
+- Linked Lists, Stacks and
+Queues
+- Analysis of Algorithms
+- Priority Queues
+- Heaps
+- Trees
+  - Binary Trees
+  - Balanced Trees
+  - KD Trees
+  - Traversals
+- Hash Tables
+- Graphs
+  - Shortest Paths
+  - Spanning Trees
+- Strings
+  - String sorts
+  - Tries
+  - Pattern searching
