@@ -17,16 +17,6 @@ public class Node<T> {
         return data;
     }
 
-    // Setter for data
-    public void setData(T data) {
-        this.data = data;
-    }
-
-    // Getter for next node
-    public Node<T> next() {
-        return next;
-    }
-
     @Override
     public String toString() {
         return "utility.Node{" + "data=" + data + '}';
