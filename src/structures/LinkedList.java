@@ -6,7 +6,6 @@ import utility.Node;
 
 public class LinkedList<T> {
     private Node<T> head = null;
-    private int count = 0;
 
     // Add a new node at the end
     public void add(LinkedList<T> list, T data) {
@@ -27,12 +26,11 @@ public class LinkedList<T> {
             // Insert the new_node at last node
             last.next = new_node;
         }
-        count ++;
     }
 
     // Remove and return a node by index
     public Node<T> remove(int index) {
-        if (index >= count || index < 0){
+        if (index >= this.size() || index < 0){
             throw new IndexOutOfBoundsException();
         }
         else{
@@ -45,14 +43,13 @@ public class LinkedList<T> {
             i++;
         }
         previous.next = current.next;
-        count --;
         return current;
         }
     }
 
     // Get the data from the node at the specified index
     public T get(int index){
-        if (index >= count || index < 0){
+        if (index >= this.size() || index < 0){
             throw new IndexOutOfBoundsException();
         }
         else{
@@ -68,18 +65,23 @@ public class LinkedList<T> {
 
     // Check if LL is empty
     public Boolean isEmpty(){
-        return count == 0;
+        return this.head == null;
     }
 
     // Return the number of elements in LL
     public int size(){
-        return this.count;
+        int total = 0;
+        Node<T> current = head;
+        while(current != null){
+            total ++;
+            current = current.next;
+        }
+        return total;
     }
 
     // Clear all nodes from LL
     public void clear(){
         this.head = null;
-        count = 0;
     }
 
     // Check if LL contains a data item
