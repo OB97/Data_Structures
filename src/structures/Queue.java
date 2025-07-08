@@ -28,7 +28,7 @@ public class Queue<T> {
         }
     }
 
-    // Pop first item in the Queue
+    // Peek at first item in the Queue
     public Node<T> peek(Queue<T> queue){
         return queue.head;
     }
