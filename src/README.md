@@ -17,7 +17,7 @@ _______________________________
   - ✅ contains()
   - ✅ toString()
   
-  - Add insertion at end of list
+  - ✅ Add insertion at end of list
   - ADT's for doubly and circular LL
   - ✅ add size() and isEmpty() methods
   

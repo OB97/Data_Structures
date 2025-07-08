@@ -88,4 +88,16 @@ public class LLTest {
         assertThrows(IndexOutOfBoundsException.class, () -> list.get(1));
         assertThrows(IndexOutOfBoundsException.class, () -> list.remove(2));
     }
+
+    @Test
+    public void insertHead() {
+        list.insertHead("apple");
+        assertEquals("apple", list.get(0), "Head should be equal to apple");
+        list.insertHead("banana");
+        assertEquals("banana", list.get(0), "Head should be equal to banana");
+        list.insertHead("cherry");
+        assertEquals("cherry", list.get(0), "Head should be equal to cherry");
+        assertFalse(list.isEmpty(), "List should not be empty after adding elements");
+        assertEquals(3, list.size(), "Size should reflect number of added elements");
+    }
 }

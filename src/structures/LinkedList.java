@@ -98,6 +98,18 @@ public class LinkedList<T> {
         return total;
     }
 
+    public void insertHead(T data){
+        Node<T> node = new Node<>(data);
+        if(isEmpty()){
+            this.head = node;
+        }
+        else{
+            Node<T> temp = head;
+            head = node;
+            node.next = temp;
+        }
+    }
+
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder();
