@@ -7,7 +7,7 @@ Algorithm Library!
 - Eventually I think I could implement data visualization tools, like step-by-step searching and sorting, or animation-style visuals.
 
 - Important aspect of this for me personally is creating good utility functions that I can re-use and update in the future, such as a csv/json/txt file reader, hopefully will save me time from re-writing the same parsers in the future.
-_______________________________
+______________________________________________________________
 
 - ✅ Linked Lists
   - ✅ add()
@@ -20,9 +20,26 @@ _______________________________
   - ✅ Add insertion at end of list
   - ADT's for doubly and circular LL
   - ✅ add size() and isEmpty() methods
+
+  ______________________________________________________________
+
+- ✅ Stacks
+  - ✅ pop()
+  - ✅ push()
+  - ✅ peek()
+  - ✅ isEmpty()
+  - ✅ toString()
   
-- Stacks
-- Queues
+  ______________________________________________________________
+
+- ✅ Queues
+  - ✅ add()
+  - ✅ peek()
+  - ✅ remove()
+  - ✅ toString()
+  
+  ______________________________________________________________
+
 - Analysis of Algorithms
 - Priority Queues
 - Heaps
