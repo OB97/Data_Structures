@@ -18,7 +18,7 @@ public class QuickUnionUF {
     public void union(int p, int q){
         int i = find(p);
         int j = find(q);
-        // id[i] = j; <- replaced in Weighted QU
+        /** id[i] = j; <- replaced in Weighted QU **/
         if(i == j) return;
 
         // Weighted QU - link root of smaller tree to root of larger tree
