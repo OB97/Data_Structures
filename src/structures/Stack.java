@@ -1,7 +1,7 @@
 package structures;
 
 // CS-2920
-// Stack ADT
+// Stack ADT (LIFO)
 
 import utility.Node;
 
