@@ -10,16 +10,16 @@ public class QuickUnionUF {
     //constructor
     public QuickUnionUF(int N){
         id = new int[N];
-        sz = new int[N];
+        sz = new int[N]; // WEIGHTED QU
         for(int i = 0; i < N; i++){id[i] = i;}
     }
 
     // void union
     public void union(int p, int q){
-        int i = find(p);
-        int j = find(q);
-        /** id[i] = j; <- replaced in Weighted QU **/
-        if(i == j) return;
+        int i = find(p); // i = root of p
+        int j = find(q); // j = root of q
+        // id[i] = j; <- replaced in Weighted QU
+        if(i == j) return; // if they share the same root
 
         // Weighted QU - link root of smaller tree to root of larger tree
         if(sz[i] < sz[j]){
@@ -33,7 +33,7 @@ public class QuickUnionUF {
 
     }
 
-    // int find
+    // int find - find the root of a component
     public int find(int i){
 
         /** Replaced in Weighted QU
@@ -49,7 +49,7 @@ public class QuickUnionUF {
         return i;
     }
 
-    // bool connected
+    // bool connected - do two components share the same root
     public boolean connected(int p, int q){
         return find(p) == find(q);
     }

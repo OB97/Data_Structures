@@ -15,91 +15,91 @@ public class QueueTest {
         queue = new Queue<>();
     }
 
-    // Add values to queue and check toString()
+    // enqueue values to queue and check toString()
     @Test
-    public void testAdd() {
+    public void testEnqueue() {
         assertNull(queue.peek(queue));
-        queue.add(queue, "1");
-        queue.add(queue, "3");
-        queue.add(queue, "2");
-        queue.add(queue, "4");
-        queue.add(queue, "5");
+        queue.enqueue(queue, "1");
+        queue.enqueue(queue, "3");
+        queue.enqueue(queue, "2");
+        queue.enqueue(queue, "4");
+        queue.enqueue(queue, "5");
         assertEquals("[Node1 Data=1, Node2 Data=3, Node3 Data=2, Node4 Data=4, Node5 Data=5]", queue.toString(), "Queue toString does not match output.");
     }
 
-    // Remove values from queue
+    // dequeue values from queue
     @Test
-    public void testRemove() {
+    public void testDequeue() {
         assertNull(queue.peek(queue));
-        queue.add(queue, "1");
-        queue.add(queue, "2");
-        queue.add(queue, "3");
-        assertEquals("1", queue.remove(queue).getData(), "Removed value is incorrect.");
-        assertEquals("2", queue.remove(queue).getData(), "Removed value is incorrect.");
-        assertEquals("3", queue.remove(queue).getData(), "Removed value is incorrect.");
+        queue.enqueue(queue, "1");
+        queue.enqueue(queue, "2");
+        queue.enqueue(queue, "3");
+        assertEquals("1", queue.dequeue(queue).getData(), "dequeued value is incorrect.");
+        assertEquals("2", queue.dequeue(queue).getData(), "dequeued value is incorrect.");
+        assertEquals("3", queue.dequeue(queue).getData(), "dequeued value is incorrect.");
     }
 
     // Peek at values from queue
     @Test
     public void testPeek() {
-        queue.add(queue, "1");
+        queue.enqueue(queue, "1");
         assertEquals("1", queue.peek(queue).getData(), "Peeked value is incorrect.");
-        queue.remove(queue);
-        queue.add(queue, "2");
+        queue.dequeue(queue);
+        queue.enqueue(queue, "2");
         assertEquals("2", queue.peek(queue).getData(), "Peeked value is incorrect.");
-        queue.remove(queue);
-        queue.add(queue, "3");
+        queue.dequeue(queue);
+        queue.enqueue(queue, "3");
         assertEquals("3", queue.peek(queue).getData(), "Peeked value is incorrect.");
-        queue.remove(queue);
+        queue.dequeue(queue);
 
         assertNull(queue.peek(queue));
 
-        queue.add(queue, "1");
-        queue.add(queue, "2");
-        queue.add(queue, "3");
+        queue.enqueue(queue, "1");
+        queue.enqueue(queue, "2");
+        queue.enqueue(queue, "3");
         assertEquals("1", queue.peek(queue).getData(), "Peeked value is incorrect.");
-        queue.remove(queue);
+        queue.dequeue(queue);
         assertEquals("2", queue.peek(queue).getData(), "Peeked value is incorrect.");
-        queue.remove(queue);
+        queue.dequeue(queue);
         assertEquals("3", queue.peek(queue).getData(), "Peeked value is incorrect.");
 
     }
 
-    // Test 1: peek empty queue->add->remove
+    // Test 1: peek empty queue->enqueue->dequeue
     @Test
     public void test1() {
         assertNull(queue.peek(queue), "Queue should be empty initially");
-        queue.add(queue, "1");
-        assertEquals("1", queue.remove(queue).getData(), "Removed value should be '1'");
+        queue.enqueue(queue, "1");
+        assertEquals("1", queue.dequeue(queue).getData(), "dequeued value should be '1'");
     }
 
-    // Test 2: Add->add->add->add -> confirm order
+    // Test 2: enqueue->enqueue->enqueue->enqueue -> confirm order
     @Test
     public void test2() {
-        queue.add(queue, "1");
-        queue.add(queue, "2");
-        queue.add(queue, "3");
-        queue.add(queue, "4");
-        String temp = queue.remove(queue).getData() + queue.remove(queue).getData() + queue.remove(queue).getData() + queue.remove(queue).getData();
+        queue.enqueue(queue, "1");
+        queue.enqueue(queue, "2");
+        queue.enqueue(queue, "3");
+        queue.enqueue(queue, "4");
+        String temp = queue.dequeue(queue).getData() + queue.dequeue(queue).getData() + queue.dequeue(queue).getData() + queue.dequeue(queue).getData();
         assertEquals("1234", temp, "FIFO - 1234 -> 1234");
     }
 
-    // Test 3: Add->add->peek->remove->peek
+    // Test 3: enqueue->enqueue->peek->dequeue->peek
     @Test
     public void test3() {
-        queue.add(queue, "1");
-        queue.add(queue, "2");
+        queue.enqueue(queue, "1");
+        queue.enqueue(queue, "2");
         assertEquals("1", queue.peek(queue).getData(), "Peeked value should be 1");
-        assertEquals("1", queue.remove(queue).getData(), "Removed value should be '1'");
+        assertEquals("1", queue.dequeue(queue).getData(), "dequeued value should be '1'");
         assertEquals("2", queue.peek(queue).getData(), "Peeked value should be 1");
     }
 
-    // Test 4: Remove from empty queue->add->remove
+    // Test 4: dequeue from empty queue->enqueue->dequeue
     @Test
     public void test4() {
-        assertNull(queue.remove(queue));
-        queue.add(queue, "1");
-        assertEquals("1", queue.remove(queue).getData());
+        assertNull(queue.dequeue(queue));
+        queue.enqueue(queue, "1");
+        assertEquals("1", queue.dequeue(queue).getData());
 
     }
 

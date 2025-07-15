@@ -12,7 +12,7 @@ public class LinkedList<T> {
         Node<T> new_node = new Node<>(data);
 
         // If the Linked List is empty,
-        // then make the new node as head
+        // then make the new node the head
         if (list.head == null) {
             list.head = new_node;
         }

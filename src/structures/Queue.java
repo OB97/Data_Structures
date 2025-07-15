@@ -8,7 +8,7 @@ public class Queue<T> {
     private Node<T> head = null;
 
     // Add node to Queue
-    public void add(Queue<T> queue, T data){
+    public void enqueue(Queue<T> queue, T data){
         Node<T> newNode = new Node<>(data);
 
         // If the Queue is empty,
@@ -34,7 +34,7 @@ public class Queue<T> {
     }
 
     // Remove and return the head of the Queue
-    public Node<T> remove(Queue<T> queue){
+    public Node<T> dequeue(Queue<T> queue){
         Node<T> oldHead = queue.head;
         if(oldHead != null){
             queue.head = (queue.head.next);
