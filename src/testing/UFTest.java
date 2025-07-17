@@ -1,8 +1,5 @@
 package testing;
-import structures.UnionFind;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 // CS-2920
 // Unit test for Union Find ADT
