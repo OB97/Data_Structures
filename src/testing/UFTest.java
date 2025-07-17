@@ -1,15 +1,16 @@
 package testing;
 import org.junit.jupiter.api.BeforeEach;
+import structures.*;
 
 // CS-2920
 // Unit test for Union Find ADT
 
 public class UFTest {
-    private UnionFind uf;
+    private QuickUnionUF uf;
 
     // default array size = 10
     @BeforeEach
     public void setUp() {
-        uf = new UnionFind(10);
+        uf = new QuickUnionUF(10);
     }
 }
