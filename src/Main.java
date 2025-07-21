@@ -3,22 +3,40 @@
 
 import structures.*;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Comparable[] a = new Comparable[5];
-        a[0] = 1;
-        a[1] = 3;
-        a[2] = 2;
-        a[3] = 5;
-        a[4] = 4;
+        // Define your String arrays
+        String[] QU = {"find()", "union()"};
+        String[] mergeSort = {"sort()", "merge()"};
+        String[] quickSort = {"partition()", "sort()", "exch()"};
+        String[] priorityQueue = {"insert()", "delete()", "peek()", "isEmpty()"};
+        String[] heapSort = {"swim()", "sink()", "insert()", "delete()"};
 
-        System.out.println(Arrays.toString(a));
+        // Use a HashMap to store the names and their corresponding String arrays
+        Map<String, String[]> dataStructures = new HashMap<>();
+        dataStructures.put("QU", QU);
+        dataStructures.put("mergeSort", mergeSort);
+        dataStructures.put("quickSort", quickSort);
+        dataStructures.put("priorityQueue", priorityQueue);
+        dataStructures.put("heapSort", heapSort);
 
-        MergeSort.sort(a);
+        // Convert the keys (names) to an ArrayList to allow random access
+        ArrayList<String> names = new ArrayList<>(dataStructures.keySet());
 
-        System.out.println(Arrays.toString(a));
+        Random r = new Random();
+        Random q = new Random();
 
+        // Get a random name
+        String chosenName = names.get(r.nextInt(names.size()));
+
+        // Retrieve the corresponding String array using the chosen name
+        String[] chosenArray = dataStructures.get(chosenName);
+
+        String chosenMethod = chosenArray[q.nextInt(chosenArray.length-1)];
+
+        // Print the name and its contents
+        System.out.println(chosenName + " " + chosenMethod);
     }
 }
