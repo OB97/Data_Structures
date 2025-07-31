@@ -244,8 +244,9 @@ public class MaxPQ<Key> implements Iterable<Key> {
     }
 
 
-    ///************************************************************************
-    ///Iterator.
+    /************************************************************************
+    * Iterator.
+    ************************************************************************/
 
     /**
      * Returns an iterator that iterates over the keys on this priority queue
