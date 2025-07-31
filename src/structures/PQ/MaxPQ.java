@@ -1,6 +1,4 @@
 /******************************************************************************
- *  Compilation:  javac PQ.MaxPQ.java
- *  Execution:    java PQ.MaxPQ < input.txt
  *
  *  Generic max priority queue implementation with a binary heap.
  *  Can be used with a comparator instead of the natural order,
