@@ -1,5 +1,4 @@
-package structures;
-import structures.InsertionSort;
+package Sorting;
 
 // CS-2920
 // Merge Sort ADT

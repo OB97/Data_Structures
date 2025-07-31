@@ -1,4 +1,4 @@
-package structures;
+package Sorting;
 
 // CS-2920
 // Quick Sort ADT

@@ -1,4 +1,4 @@
-package structures;
+package ADT;
 import utility.Node;
 
 // CS-2920

@@ -1,4 +1,4 @@
-package structures;
+package ADT;
 
 // CS-2920
 // Stack ADT (LIFO)

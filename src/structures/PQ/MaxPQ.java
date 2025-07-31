@@ -1,6 +1,6 @@
 /******************************************************************************
- *  Compilation:  javac MaxPQ.java
- *  Execution:    java MaxPQ < input.txt
+ *  Compilation:  javac PQ.MaxPQ.java
+ *  Execution:    java PQ.MaxPQ < input.txt
  *
  *  Generic max priority queue implementation with a binary heap.
  *  Can be used with a comparator instead of the natural order,
@@ -13,13 +13,15 @@
  *
  ******************************************************************************/
 
+package PQ;
+
 import java.util.Scanner; // Import the Scanner class for input
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- *  The {@code MaxPQ} class represents a priority queue of generic keys.
+ *  The {@code PQ.MaxPQ} class represents a priority queue of generic keys.
  *  It supports the usual <em>insert</em> and <em>delete-the-maximum</em>
  *  operations, along with methods for peeking at the maximum key,
  *  testing if the priority queue is empty, and iterating through
@@ -280,13 +282,13 @@ public class MaxPQ<Key> implements Iterable<Key> {
     }
 
     /**
-     * Unit tests the {@code MaxPQ} data type with interactive input.
+     * Unit tests the {@code PQ.MaxPQ} data type with interactive input.
      * Allows user to input strings, remove largest with "-", and finish with empty string.
      *
      * @param args the command-line arguments (not used for interactive input here)
      */
     public static void main(String[] args) {
-        MaxPQ<String> pq = new MaxPQ<>(); // Initialize your MaxPQ instance
+        MaxPQ<String> pq = new MaxPQ<>(); // Initialize your PQ.MaxPQ instance
 
         // Create a Scanner object to read input from the console
         Scanner scanner = new Scanner(System.in);

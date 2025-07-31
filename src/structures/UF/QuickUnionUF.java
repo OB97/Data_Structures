@@ -1,4 +1,4 @@
-package structures;
+package UF;
 
 // CS-2920
 // Quick Union UF ADT

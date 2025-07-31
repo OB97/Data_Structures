@@ -1,4 +1,4 @@
-package structures;
+package Sorting;
 
 public class InsertionSort {
     public static void sort(Comparable[] array) {
