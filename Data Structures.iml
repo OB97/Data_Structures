@@ -37,6 +37,5 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="stdlib" level="project" />
   </component>
 </module>
