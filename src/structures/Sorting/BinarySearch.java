@@ -1,4 +1,4 @@
-package ST;
+package Sorting;
 
 public class BinarySearch {
 }

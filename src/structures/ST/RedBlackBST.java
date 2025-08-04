@@ -28,6 +28,7 @@
  ******************************************************************************/
 
 package ST;
+import Sorting.BST;
 import edu.princeton.cs.algs4.*;
 import java.util.NoSuchElementException;
 
